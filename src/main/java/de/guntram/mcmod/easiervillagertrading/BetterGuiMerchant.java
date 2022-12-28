@@ -395,9 +395,7 @@ public class BetterGuiMerchant extends GuiMerchant {
     private boolean areItemStacksMergable(ItemStack a, ItemStack b) {
         if (a==null || b==null)
             return false;
-        if (a.getItem() == b.getItem()
-        &&  (!a.getHasSubtypes() || a.getItemDamage()==b.getItemDamage())
-        &&   ItemStack.areItemStackTagsEqual(a, b))
+        if (a.getItem() == b.getItem())
             return true;
         return false;
     }
